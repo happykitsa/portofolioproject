@@ -1,19 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portfolio - Créatif Developer</title>
+    <!-- Polices : Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Icônes : FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-     <header>
-
-     </header>
-     <main>
-        <section class="homeSection">
-            <h1>Home</h1>
-        </section>
-     </main>
 <body>
-    
+
+    <!-- BARRE DE PRÉVISUALISATION -->
+    <nav class="preview-bar">
+        <div class="bar-section bar-gauche">
+            <img src="logo.png" alt="BOOTSTRAPMADE">
+            <div class="device-icons">
+                <i class="fas fa-desktop active"></i>
+                <i class="fas fa-tablet-alt"></i>
+                <i class="fas fa-mobile-alt"></i>
+            </div>
+        </div>
+        <div class="bar-section bar-centre">
+            <i class="fas fa-chevron-left"></i>
+            <span>Style</span>
+            <i class="fas fa-chevron-right"></i>
+        </div>
+        <div class="bar-section bar-droite">
+            <i class="fas fa-external-link-alt"></i>
+            <button class="btn-telecharger">
+                <i class="fas fa-download"></i> TÉLÉCHARGER
+            </button>
+        </div>
+    </nav>
+
+    <!-- SECTION HERO -->
+    <section class="hero-section">
+        <!-- Icône Menu Hamburger (en haut à droite) -->
+        <div class="menu-burger">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <div class="container">
+            <!-- TEXTE GAUCHE -->
+            <div class="hero-content">
+                <h1 class="main-title">créatif<span>Developer</span></h1>
+                <p class="description">
+                    Je crée des expériences numériques qui inspirent et captivent. 
+                    Passionnée par le design épuré et les solutions innovantes, 
+                    je transforme les idées en réalités esthétiques et fonctionnelles.
+                </p>
+
+                <div class="stats">
+                    <div class="stat-item">
+                        <h3>150</h3>
+                        <p>Projets terminés</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>5</h3>
+                        <p>Années d'expérience</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>98</h3>
+                        <p>Clients satisfaits</p>
+                    </div>
+                </div>
+
+                <div class="btn-container">
+                    <a href="#" class="btn btn-primary">Voir mon travail</a>
+                    <a href="#" class="btn btn-outline">Entrer en contact</a>
+                </div>
+
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <!-- IMAGE DROITE AVEC BADGES -->
+            <div class="hero-image-area">
+                <div class="image-wrapper">
+                    <!-- Forme bleue derrière -->
+                    <div class="blue-bg-shape"></div>
+                    
+                    <!-- Photo principale -->
+                    <img src="profile-square-1.webp" alt="Developer" class="profile-img">
+
+                    <!-- Badges flottants -->
+                    <div class="badge badge-top">
+                        <i class="fas fa-palette"></i>
+                        <span>Conception d'interface utilisateur/d'expérience utilisateur</span>
+                    </div>
+
+                    <div class="badge badge-middle">
+                        <i class="fas fa-code"></i>
+                        <span>Développement</span>
+                    </div>
+
+                    <div class="badge badge-bottom">
+                        <i class="fas fa-bolt"></i>
+                        <span>Idées créatives</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bouton de retour en haut -->
+        <div class="scroll-top">
+            <i class="fas fa-arrow-up"></i>
+        </div>
+    </section>
+
 </body>
 </html>
