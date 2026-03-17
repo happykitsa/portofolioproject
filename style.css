@@ -232,3 +232,88 @@ body > nav > div.bar-section.bar-gauche > img{
     justify-content: center;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
+/* SECTION À PROPOS */
+.about-section {
+    padding: 80px 8%;
+    background-color: #ffffff;
+}
+
+/* En-tête : Titre + Sous-titre */
+.section-header {
+    margin-bottom: 60px;
+}
+
+.title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.title-wrapper h2 {
+    font-size: 2rem;
+    color: #13447f; /* Bleu foncé */
+    text-transform: none;
+    font-weight: 700;
+}
+
+/* La fameuse ligne bleue à côté de "À propos" */
+.title-wrapper .line {
+    width: 120px;
+    height: 2px;
+    background-color: #065cc2; /* Bleu vif */
+}
+
+.section-subtitle {
+    color: #99a9b5; /* Gris clair */
+    font-size: 0.95rem;
+    max-width: 600px;
+}
+
+/* Grille de contenu */
+.about-grid {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.about-left {
+    flex: 1; /* Occupe 50% mais reste vide */
+}
+
+.about-right {
+    flex: 1; /* Occupe 50% */
+}
+
+.about-title {
+    font-size: 2.2rem;
+    color: #13447f;
+    line-height: 1.3;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.about-title span {
+    /* Si vous voulez mettre Brandon en évidence comme dans le titre précédent */
+    color: #13447f; 
+}
+
+.about-text {
+    color: #5f6f7d; /* Gris texte */
+    font-size: 1.05rem;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+/* Ajustement pour tablette/mobile */
+@media (max-width: 992px) {
+    .about-grid {
+        flex-direction: column;
+    }
+    .about-left {
+        display: none; /* Cache la colonne vide sur mobile */
+    }
+    .about-title {
+        font-size: 1.8rem;
+    }
+}
