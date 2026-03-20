@@ -47,9 +47,13 @@ h1, h2, h3, h4, .main-title, .about-title {
 }
 
 body {
-    background-color: #ffffff;
-    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #314862; /* On revient sur un gris très foncé pour la lisibilité */
+    background-color: #fff;
 }
+
 
 /* PREVIEW BAR */
 .preview-bar {
@@ -91,16 +95,31 @@ body > nav > div.bar-section.bar-gauche > img{
 
 /* HERO SECTION */
 .hero-section {
-    padding: 60px 8%;
+    padding: 60px 10%;
     min-height: 90vh;
     display: flex;
     align-items: center;
     position: relative;
-    /* Petit motif géométrique en fond (optionnel) */
-    background-image: linear-gradient(45deg, #f9f9f9 25%, transparent 25%);
-    background-size: 100px 100px;
+    overflow: hidden; /* Pour que le fond ne dépasse pas */
+    background-color: #f8fbfe; /* Couleur de secours si l'image ne charge pas */
+    
+    
 }
-
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('abstract-bg-1.webp'); /* Image de fond */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0.09; /* Légère transparence pour ne pas gêner la lecture */
+    z-index: 1; /* Derrière le contenu */
+    margin: 0;
+}
 .container {
     display: flex;
     align-items: center;
@@ -275,6 +294,7 @@ body > nav > div.bar-section.bar-gauche > img{
 .about-section {
     padding: 80px 8%;
     background-color: #ffffff;
+    align-items: center;
 }
 
 /* En-tête : Titre + Sous-titre */
@@ -288,6 +308,8 @@ body > nav > div.bar-section.bar-gauche > img{
     gap: 15px;
     margin-bottom: 10px;
     font-family: 'Quicksand', sans-serif;
+    margin-left: -5px; /* Légère compensation pour aligner le titre avec la ligne */
+    padding-left: 5px; /* Légère compensation pour aligner le titre avec la ligne */
 }
 
 .title-wrapper h2 {
@@ -327,6 +349,7 @@ body > nav > div.bar-section.bar-gauche > img{
 
 .about-right {
     flex: 1; /* Occupe 50% */
+    margin-bottom: 5%;
 }
 
 .about-title {
@@ -364,12 +387,9 @@ body > nav > div.bar-section.bar-gauche > img{
     }
 }
 
-.details-section {
-    padding: 60px 8%;
-    background-color: #fff;
-}
 
-.details-section .container {
+
+.about-section.container {
     display: flex;
     gap: 60px;
     align-items: flex-start;
@@ -416,25 +436,59 @@ body > nav > div.bar-section.bar-gauche > img{
 /* COLONNE DROITE */
 .details-main {
     flex: 2;
+     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    padding: 0 20px;
+    font-family: 'Roboto', sans-serif;
 }
 
+.details-section {
+    display: flex;
+    padding: 0 10%;
+    
+}
+.details-section{
+    display: flex;
+flex-direction: column;
+align-items: start;
+justify-content: center;
+}
+.details-section .section-header{
+    padding-right: -50px;
+}
 /* Cartes Services */
 .services-grid {
-    display: flex;
+    /* display: flex;
     gap: 20px;
     margin-bottom: 50px;
     font-family: 'Roboto', sans-serif;
+    align-items: center;
+    justify-content: center; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* grid-template-columns: repeat(3, 200px); */
+    gap: 20px;
+    margin-bottom: 50px;
+     font-family: 'Roboto', sans-serif;
+     align-items: start;
+     justify-content: space-between;
+    
 }
 
 .service-card {
     flex: 1;
     background-color: #f8fbfe;
-
-    padding: 25px 20px;
     border-radius: 10px;
     text-align: center;
     transition: 0.3s;
-        border-color: #065cc2;
+    border-color: #065cc2;
+    /* width: 150px; */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+     
     
 }
 
@@ -519,14 +573,26 @@ body > nav > div.bar-section.bar-gauche > img{
     justify-content: center;
 }
 .expertise-area {
-    padding: 80px 8%;
+    padding: 80px 10%;
     background-color: #fff;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    margin-left: 1%;
+    margin-right: 2%;
 }
 
+
 .expertise-area .container {
-    display: flex;
+    /* display: flex;
+    gap: 40px;
+    align-items: flex-start; */
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+     font-family: 'Roboto', sans-serif;
     gap: 40px;
     align-items: flex-start;
+
 }
 
 /* GRILLE DE GAUCHE */
@@ -545,6 +611,10 @@ body > nav > div.bar-section.bar-gauche > img{
     border-radius: 12px;
     font-family: 'Quicksand', sans-serif;
      transition: 0.3s;
+}
+.skill-card:hover {
+    transform: translateY(-5px);
+    border-color: #065cc2;
 }
 
 .card-header {
@@ -605,6 +675,13 @@ body > nav > div.bar-section.bar-gauche > img{
     flex: 1;
     background-color: #fff;
     padding: 20px;
+    opacity: 1;
+    transition: none;
+    /* width: 300px; */
+     font-family: 'Roboto', sans-serif;
+     box-shadow: 0 15px 35px rgba(6, 92, 194, 0.1);
+     border-radius: 10px;
+     height: 100%;
 }
 
 .title-blue {
@@ -677,6 +754,11 @@ body > nav > div.bar-section.bar-gauche > img{
     font-weight: 700;
     cursor: default;
 }
+ .exp-card:hover {
+    border-color: #065cc2;
+    transform: translateY(-5px);
+
+}
 
 /* RESPONSIVE */
 @media (max-width: 992px) {
@@ -691,12 +773,18 @@ body > nav > div.bar-section.bar-gauche > img{
     padding: 80px 8%;
     background-color: #ffffff;
 }
+.resume-section .section-header {
+    margin-bottom: 60px;
+
+}
 
 .resume-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
     margin-top: 40px;
+    padding: 0 50px;
+     font-family: 'Roboto', sans-serif;
 }
 
 .column-title {
@@ -833,7 +921,7 @@ body > nav > div.bar-section.bar-gauche > img{
     background-color: #fff;
     border: 3px solid #065cc2;
     border-radius: 50%;
-    z-index: 2;
+    /* z-index: 2; */
 }
 
 /* RESPONSIVE */
