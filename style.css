@@ -68,6 +68,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
+    width: 100vw;
 }
 
 .bar-section { flex: 1; display: flex; align-items: center; }
@@ -1133,4 +1134,289 @@ justify-content: center;
     background: #314862;    /* Ta couleur bleu foncé au survol */
     color: white;           /* On met le texte en blanc pour que ce soit lisible */
 }
+/* --- SECTION GLOBALE --- */
+.Testimonials-section {
+    padding: 80px 8%;
+    background-color:white; /* Fond très léger pour faire ressortir les cartes */
+    overflow: hidden;
+}
 
+/* --- EN-TÊTE --- */
+.header-section {
+    margin-bottom: 30px;
+}
+
+.title-wrapper3 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.title-wrapper3 h2 {
+    font-size: 2rem;
+    color: #13447f;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.title-wrapper3 .line {
+    width: 100px;
+    height: 2px;
+    background-color: #065cc2;
+}
+
+.section-subtitle {
+    color: #99a9b5;
+    font-family: 'Roboto', sans-serif;
+    max-width: 600px;
+    margin-bottom: 30px;
+
+}
+
+/* --- STYLE COMMUN DES CARTES --- */
+.card-test, .cardtest-item {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Ombre douce */
+    transition: transform 0.3s ease;
+    border: 1px solid transparent;
+}
+
+/* On ne cible que les cartes qui sont ENFANTS de la section HAUT */
+.testimonial-itemshaut .card-test:hover {
+    transform: translateY(-10px);
+    border-color: #065cc2;
+}
+
+/* On ne met rien pour .testimonial-itemsbas .card-test:hover */
+
+/* Style spécifique haut (Guillemets) */
+.fa-quote-left {
+    color: #065cc2;
+    font-size: 2rem;
+    opacity: 0.2;
+    margin-bottom: 15px;
+}
+
+.groupe-etoiles {
+    color: #ffc107; /* Jaune or */
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.para1 {
+    font-style: italic;
+    color: #5f6f7d;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* --- GRILLES ET ALIGNEMENTS --- */
+.testimonial-itemshaut {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.testimonial-itemsbas {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 30px;
+    scrollbar-width: none; /* Cache la barre Firefox */
+}
+
+/* Les cartes du bas */
+.testimonial-itemsbas > div {
+    flex: 0 0 calc(33.33% - 20px); /* 3 cartes visibles */
+    scroll-snap-align: start;
+    border-top: 3px solid #065cc2; /* Bordure bleue en haut style capture */
+}
+
+/* --- PROFIL CLIENT --- */
+.profil-client {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.profil-client img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.client-info h4 {
+    font-size: 1rem;
+    color: #13447f;
+}
+
+.client-info p {
+    font-size: 0.8rem;
+    color: #99a9b5;
+}
+
+/* --- DERNIÈRE CARTE (RÉSUMÉ) --- */
+.dernierecarte {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    width: calc(33.33% - 20px);
+    margin: 50px auto;
+    border: 1px solid #f1f5f9;
+
+}
+
+.dernierecarte h1 {
+    font-size: 3rem;
+    color: #13447f;
+    margin-bottom: 10px;
+}
+
+.cardgrif {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.cardgrif div {
+    background-color: #f0f7ff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: #065cc2;
+}
+.testimonial-pagination {
+    display: flex;            /* Aligne les points sur une ligne horizontale */
+    justify-content: center;   /* Centre les points au milieu de la section */
+    gap: 10px;                /* Espace de 10px entre chaque point */
+    margin-top: 20px;         /* Espace avec le slider au-dessus */
+    margin-bottom: 40px;      /* Espace avec la dernière carte en-dessous */
+}
+
+.dot {
+    width: 10px;              /* Largeur du point */
+    height: 10px;             /* Hauteur du point (égal à la largeur = carré) */
+    background-color: #bcd1ee; /* Couleur bleu clair (inactif) */
+    border-radius: 50%;       /* LE SECRET : transforme le carré en cercle parfait */
+    display: inline-block;    /* Permet de donner une taille au span */
+    cursor: pointer;          /* Change le curseur en main au survol */
+    transition: all 0.3s ease; /* Animation douce si on change de couleur */
+}
+
+/* LE POINT ACTIF (Celui qui est sélectionné) */
+.dot.active {
+    background-color: #065cc2; /* Le bleu vif de ton site */
+    width: 12px;               /* On le fait un tout petit peu plus grand */
+    height: 12px;
+}
+
+/* EFFET AU SURVOL */
+.dot:hover {
+    background-color: #065cc2; /* Devient bleu foncé quand on passe la souris */
+}
+.faq-section {
+    padding: 80px 8%; /* Même largeur que les autres sections */
+    background-color: #ffffff;
+}
+
+.faq-list {
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espace entre chaque boîte de question */
+    margin-top: 40px;
+}
+
+/* STYLE DE LA BOÎTE (ITEM) */
+.faq-item {
+    background-color: #fff;
+    border: 1px solid #e1e9f0;
+    border-radius: 8px;
+    padding: 20px 30px;
+    margin-bottom: 15px;
+    transition: all 0.4s ease; /* Transition fluide pour la bordure et l'ombre */
+    overflow: hidden; /* Important pour cacher le texte qui dépasse */
+}
+/* STYLE DE LA QUESTION */
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* cursor: pointer; */
+}
+
+.faq-question h3 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #314862; /* Gris-bleu foncé */
+    
+}
+
+.faq-question i {
+    font-size: 0.9rem;
+    color: #99a9b5;
+    transition: transform 0.4s ease; /* LE SECRET DE LA ROTATION */
+}
+
+
+.faq-item:hover h3 {
+    color: #2a75cf; /* Texte devient bleu */
+}
+
+/* --- ÉTAT ACTIF (L'élément ouvert) --- */
+.faq-item.active {
+    background-color: color-mix(in srgb, #065cc2, transparent 97%);
+    border-color: #e7ecf3; 
+    width: 100%;
+    height: 130px;
+}
+
+.faq-item.active h3 {
+    color: #065cc2;
+    margin-bottom: 15px; /* Espace pour le texte en-dessous */
+}
+
+.faq-item.active i {
+    color: #065cc2;
+    transform: rotate(0deg); /* La flèche change de sens ou reste vers le bas */
+}
+/* Si ton icône de base est vers la droite, on la tourne de 90 deg vers le bas */
+.faq-item.active .faq-question i {
+    transform: rotate(90deg); 
+    color: #065cc2;
+}
+.faq-item.active .faq-content {
+    max-height: 500px;  /* On donne une hauteur assez grande pour laisser passer le texte */
+    opacity: 1;         /* Il devient visible */
+    margin-top: 15px;   /* Petit espace avec le titre */
+}
+/* LE CONTENU DE LA RÉPONSE */
+.faq-content {
+    /* Au lieu de display: none, on utilise ceci pour pouvoir animer plus tard */
+    max-height: 0;       /* Hauteur zéro au départ */
+    opacity: 0;          /* Invisible */
+    overflow: hidden;
+    transition: all 0.4s ease; /* Animation d'ouverture */
+}
+
+.faq-item.active .faq-content {
+    display: block; /* Visible seulement si la classe .active est présente */
+}
+
+.faq-content p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.95rem;
+    color: #5f6f7d;
+    line-height: 1.6;
+}
