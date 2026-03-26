@@ -1,24 +1,4 @@
-/* VARIABLES ET RESET */
 
-/* --- POLICE 1 : QUICKSAND (Titres) --- */
-@font-face {
-    font-family: 'Quicksand';
-    src: url('fonts/Quicksand-Bold.ttf') format('truetype');
-    font-weight: 700;
-}
-
-/* --- POLICE 2 : ROBOTO (Texte de corps) --- */
-@font-face {
-    font-family: 'Roboto';
-    src: url('fonts/Roboto-Regular.ttf') format('truetype');
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('fonts/Roboto-Bold.ttf') format('truetype');
-    font-weight: 700;
-}
 :root {
     --primary-blue: #065cc2;
     --dark-blue: #13447f;
@@ -31,17 +11,26 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif; /* Roboto pour le texte de base */
+    font-family: 'Roboto', sans-serif;
+    /* Roboto pour le texte de base */
 }
 
 /* Règle spécifique pour les TITRES (h1, h2, h3, h4) */
-h1, h2, h3, h4, .main-title, .about-title {
-    font-family: 'Quicksand', sans-serif; /* Quicksand pour les titres */
+h1,
+h2,
+h3,
+h4,
+.main-title {
+    font-family: 'Quicksand', sans-serif;
+    /* Quicksand pour les titres */
     font-weight: 700;
+
 }
 
+
 /* Règle spécifique pour les boutons ou badges si nécessaire */
-.btn, .badge {
+.btn,
+.badge {
     font-family: 'Quicksand', sans-serif;
     font-weight: 600;
 }
@@ -50,7 +39,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    color: #314862; /* On revient sur un gris très foncé pour la lisibilité */
+    color: #314862;
+    /* On revient sur un gris très foncé pour la lisibilité */
     background-color: #fff;
 }
 
@@ -71,19 +61,44 @@ body {
     width: 100vw;
 }
 
-.bar-section { flex: 1; display: flex; align-items: center; }
-.bar-gauche { justify-content: flex-start; gap: 20px; }
-.bar-centre { justify-content: center; gap: 15px; }
-.bar-droite { justify-content: flex-end; gap: 15px; }
+.bar-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
 
-.device-icons i { opacity: 0.5; cursor: pointer; transition: 0.3s; }
-.device-icons i.active, .device-icons i:hover { opacity: 1; }
+.bar-gauche {
+    justify-content: flex-start;
+    gap: 20px;
+}
 
-body > nav > div.bar-section.bar-gauche > img{
+.bar-centre {
+    justify-content: center;
+    gap: 15px;
+}
+
+.bar-droite {
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.device-icons i {
+    opacity: 0.5;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.device-icons i.active,
+.device-icons i:hover {
+    opacity: 1;
+}
+
+body>nav>div.bar-section.bar-gauche>img {
     width: auto;
     cursor: pointer;
     height: 32px;
 }
+
 .btn-telecharger {
     background-color: #0099ff;
     color: white;
@@ -101,11 +116,14 @@ body > nav > div.bar-section.bar-gauche > img{
     display: flex;
     align-items: center;
     position: relative;
-    overflow: hidden; /* Pour que le fond ne dépasse pas */
-    background-color: #f8fbfe; /* Couleur de secours si l'image ne charge pas */
-    
-    
+    overflow: hidden;
+    /* Pour que le fond ne dépasse pas */
+    background-color: #f8fbfe;
+    /* Couleur de secours si l'image ne charge pas */
+
+
 }
+
 .hero-section::before {
     content: '';
     position: absolute;
@@ -113,22 +131,29 @@ body > nav > div.bar-section.bar-gauche > img{
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('abstract-bg-1.webp'); /* Image de fond */
+    background-image: url('abstract-bg-1.webp');
+    /* Image de fond */
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    opacity: 0.09; /* Légère transparence pour ne pas gêner la lecture */
-    z-index: 1; /* Derrière le contenu */
+    opacity: 0.09;
+    /* Légère transparence pour ne pas gêner la lecture */
+    z-index: 1;
+    /* Derrière le contenu */
     margin: 0;
 }
+
 .container {
     display: flex;
     align-items: center;
     width: 100%;
     gap: 50px;
+    /* margin-left: 4%; */
 }
 
-.hero-content { flex: 1; }
+.hero-content {
+    flex: 1;
+}
 
 .main-title {
     font-size: 3.5rem;
@@ -136,7 +161,10 @@ body > nav > div.bar-section.bar-gauche > img{
     line-height: 1.2;
     margin-bottom: 20px;
 }
-.main-title span { color: var(--primary-blue); }
+
+.main-title span {
+    color: var(--primary-blue);
+}
 
 .description {
     color: var(--text-gray);
@@ -144,7 +172,7 @@ body > nav > div.bar-section.bar-gauche > img{
     line-height: 1.6;
     margin-bottom: 40px;
     max-width: 90%;
-        font-family: 'Roboto', sans-serif
+    font-family: 'Roboto', sans-serif
 }
 
 /* STATS */
@@ -153,12 +181,14 @@ body > nav > div.bar-section.bar-gauche > img{
     gap: 50px;
     margin-bottom: 40px;
 }
+
 .stat-item h3 {
     font-size: 2rem;
     color: var(--primary-blue);
     text-align: center;
     font-family: 'Roboto', sans-serif;
 }
+
 .stat-item p {
     color: var(--text-gray);
     font-size: 0.9rem;
@@ -166,7 +196,12 @@ body > nav > div.bar-section.bar-gauche > img{
 }
 
 /* BOUTONS */
-.btn-container { display: flex; gap: 20px; margin-bottom: 40px; }
+.btn-container {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
 .btn {
     padding: 12px 30px;
     border-radius: 50px;
@@ -174,21 +209,30 @@ body > nav > div.bar-section.bar-gauche > img{
     font-weight: 600;
     transition: 0.3s;
 }
+
 .btn-primary {
     background-color: var(--primary-blue);
     color: white;
     box-shadow: 0 8px 15px rgba(6, 92, 194, 0.2);
     font-family: 'Roboto', sans-serif;
 }
+
 .btn-outline {
     border: 1px solid #d1d9e0;
     color: var(--dark-blue);
     font-family: 'Roboto', sans-serif;
 }
-.btn:hover { transform: translateY(-3px); }
+
+.btn:hover {
+    transform: translateY(-3px);
+}
 
 /* SOCIAL */
-.social-links { display: flex; gap: 15px; }
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
 .social-links i {
     width: 40px;
     height: 40px;
@@ -200,13 +244,18 @@ body > nav > div.bar-section.bar-gauche > img{
     color: var(--text-gray);
     transition: 0.3s;
 }
-.social-links i:hover {
-    background: var(--primary-blue);
+
+.social-links:hover i {
+    background: rgb(7, 7, 177);
     color: white;
 }
 
 /* IMAGE ET BADGES (Le plus important) */
-.hero-image-area { flex: 1; display: flex; justify-content: center; }
+.hero-image-area {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
 
 .image-wrapper {
     position: relative;
@@ -241,12 +290,13 @@ body > nav > div.bar-section.bar-gauche > img{
     display: flex;
     align-items: center;
     gap: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     z-index: 10;
     font-size: 0.85rem;
     font-weight: 600;
     color: var(--dark-blue);
 }
+
 .badge i {
     color: var(--primary-blue);
     font-size: 1.2rem;
@@ -270,11 +320,13 @@ body > nav > div.bar-section.bar-gauche > img{
 
 /* MENU ET SCROLL */
 .menu-burger {
-    position: absolute;
-    top: 30px;
+    position: fixed;
+    top: 80px;
     right: 40px;
     font-size: 1.5rem;
     color: var(--dark-blue);
+    z-index: 999;
+    cursor: pointer;
 }
 
 .scroll-top {
@@ -282,15 +334,20 @@ body > nav > div.bar-section.bar-gauche > img{
     bottom: 30px;
     right: 30px;
     background: var(--primary-blue);
-    color: white;
     width: 44px;
     height: 44px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+   
 }
+
+.scroll-top i {
+    font-size: 1.2rem;
+    color: white;
+}
+
 /* SECTION À PROPOS */
 .about-section {
     padding: 80px 8%;
@@ -309,27 +366,30 @@ body > nav > div.bar-section.bar-gauche > img{
     gap: 15px;
     margin-bottom: 10px;
     font-family: 'Quicksand', sans-serif;
-    margin-left: -5px; /* Légère compensation pour aligner le titre avec la ligne */
+    /* margin-left: -5px; Légère compensation pour aligner le titre avec la ligne
     padding-left: 5px; /* Légère compensation pour aligner le titre avec la ligne */
 }
 
-.title-wrapper h2 {
-    font-size: 2rem;
-    color: #13447f; /* Bleu foncé */
+*/ .title-wrapper h2 {
+    font-size: 32px;
+    color: #13447f;
+    /* Bleu foncé */
     text-transform: none;
     font-weight: 700;
-     font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', sans-serif;
 }
 
 /* La ligne bleue à côté de "À propos" */
 .title-wrapper .line {
     width: 120px;
     height: 2px;
-    background-color: #065cc2; /* Bleu vif */
+    background-color: #065cc2;
+    /* Bleu vif */
 }
 
 .section-subtitle {
-    color: #99a9b5; /* Gris clair */
+    color: #99a9b5;
+    /* Gris clair */
     font-size: 0.95rem;
     max-width: 600px;
     font-family: 'Quicksand', sans-serif;
@@ -345,16 +405,18 @@ body > nav > div.bar-section.bar-gauche > img{
 }
 
 .about-left {
-    flex: 1; /* Occupe 50% mais reste vide */
+    flex: 1;
+    /* Occupe 50% mais reste vide */
 }
 
 .about-right {
-    flex: 1; /* Occupe 50% */
+    flex: 1;
+    /* Occupe 50% */
     margin-bottom: 5%;
 }
 
 .about-title {
-    font-size: 2.2rem;
+    font-size: 32px;
     color: #13447f;
     line-height: 1.3;
     margin-bottom: 20px;
@@ -364,36 +426,23 @@ body > nav > div.bar-section.bar-gauche > img{
 
 .about-title span {
     /* Si vous voulez mettre Brandon en évidence comme dans le titre précédent */
-    color: #13447f; 
+    color: #13447f;
 }
 
 .about-text {
-    color: #5f6f7d; /* Gris texte */
+    color: #5f6f7d;
+    /* Gris texte */
     font-size: 1.05rem;
     line-height: 1.7;
     text-align: justify;
     font-family: 'Roboto', sans-serif;
 }
 
-/* Ajustement pour tablette/mobile */
-@media (max-width: 992px) {
-    .about-grid {
-        flex-direction: column;
-    }
-    .about-left {
-        display: none; /* Cache la colonne vide sur mobile */
-    }
-    .about-title {
-        font-size: 1.8rem;
-    }
-}
-
-
-
 .about-section.container {
     display: flex;
     gap: 60px;
     align-items: flex-start;
+   
 }
 
 /* COLONNE GAUCHE */
@@ -418,9 +467,10 @@ body > nav > div.bar-section.bar-gauche > img{
     border-radius: 50%;
     object-fit: cover;
 }
- 
+
 .signature {
-    font-family: 'Caveat', cursive; /* Police manuscrite */
+    font-family: 'Caveat', cursive;
+    /* Police manuscrite */
     font-size: 3rem;
     color: #314862;
     margin-bottom: 10px;
@@ -437,45 +487,38 @@ body > nav > div.bar-section.bar-gauche > img{
 /* COLONNE DROITE */
 .details-main {
     flex: 2;
-     display: flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     width: auto;
-    padding: 0 20px;
+    padding: 0 50px;
     font-family: 'Roboto', sans-serif;
 }
 
 .details-section {
+    padding: 15px 10%;
     display: flex;
-    padding: 0 10%;
-    
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
 }
-.details-section{
-    display: flex;
-flex-direction: column;
-align-items: start;
-justify-content: center;
-}
-.details-section .section-header{
+
+.details-section .section-header {
     padding-right: -50px;
 }
+
 /* Cartes Services */
 .services-grid {
-    /* display: flex;
-    gap: 20px;
-    margin-bottom: 50px;
-    font-family: 'Roboto', sans-serif;
-    align-items: center;
-    justify-content: center; */
+
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     /* grid-template-columns: repeat(3, 200px); */
     gap: 20px;
     margin-bottom: 50px;
-     font-family: 'Roboto', sans-serif;
-     align-items: start;
-     justify-content: space-between;
-    
+    font-family: 'Roboto', sans-serif;
+    align-items: start;
+    justify-content: space-between;
+
 }
 
 .service-card {
@@ -486,17 +529,17 @@ justify-content: center;
     transition: 0.3s;
     border-color: #065cc2;
     /* width: 150px; */
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: auto;
+    margin-right: auto; */
     padding: 20px;
-     
-    
+
+
 }
 
 .service-card:hover {
     transform: translateY(-5px);
-     border: 1px solid #e1e9f0;
- 
+    border: 1px solid #e1e9f0;
+
 }
 
 .icon-box {
@@ -516,7 +559,8 @@ justify-content: center;
     font-size: 0.95rem;
     color: #13447f;
     margin-bottom: 10px;
-    height: 40px; /* Aligne les titres */
+    height: 40px;
+    /* Aligne les titres */
 }
 
 .service-card p {
@@ -573,14 +617,15 @@ justify-content: center;
     gap: 20px;
     justify-content: center;
 }
+
 .expertise-area {
     padding: 80px 10%;
     background-color: #fff;
     width: 100%;
     font-family: 'Roboto', sans-serif;
     height: 100%;
-    margin-left: 1%;
-    margin-right: 2%;
+    /* margin-left: 1%;
+    margin-right: 2%; */
 }
 
 
@@ -590,7 +635,7 @@ justify-content: center;
     align-items: flex-start; */
     display: grid;
     grid-template-columns: 2fr 1fr;
-     font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
     gap: 40px;
     align-items: flex-start;
 
@@ -607,12 +652,14 @@ justify-content: center;
 .skill-card {
     background-color: #f8fbfe;
     border: 1px solid #e1e9f0;
-    border-top: 3px solid #065cc2; /* Bordure bleue en haut */
+    border-top: 3px solid #065cc2;
+    /* Bordure bleue en haut */
     padding: 25px;
     border-radius: 12px;
     font-family: 'Quicksand', sans-serif;
-     transition: 0.3s;
+    transition: 0.3s;
 }
+
 .skill-card:hover {
     transform: translateY(-5px);
     border-color: #065cc2;
@@ -679,10 +726,10 @@ justify-content: center;
     opacity: 1;
     transition: none;
     /* width: 300px; */
-     font-family: 'Roboto', sans-serif;
-     box-shadow: 0 15px 35px rgba(6, 92, 194, 0.1);
-     border-radius: 10px;
-     height: 100%;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0 15px 35px rgba(6, 92, 194, 0.1);
+    border-radius: 10px;
+    height: 100%;
 }
 
 .title-blue {
@@ -755,39 +802,35 @@ justify-content: center;
     font-weight: 700;
     cursor: default;
 }
- .exp-card:hover {
+
+.exp-card:hover {
     border-color: #065cc2;
     transform: translateY(-5px);
 
 }
 
-/* RESPONSIVE */
-@media (max-width: 992px) {
-    .expertise-area .container {
-        flex-direction: column;
-    }
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
-}
 .resume-section {
-    padding: 80px 8%;
+    padding: 80px 10%;
+    font-family: 'Roboto', sans-serif;
     background-color: #ffffff;
 }
+
 .resume-section .section-header {
     margin-bottom: 60px;
     width: 100%;
-    margin-left: 4%;
+    /* margin-left: -1%;  */
 
 }
 
 .resume-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    gap: 90px;
     margin-top: 40px;
     padding: 0 50px;
-     font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    margin-left: -4%;
+    margin-right: -50px;
 }
 
 .column-title {
@@ -822,7 +865,7 @@ justify-content: center;
     padding: 30px;
     border-radius: 12px;
     margin-bottom: 25px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.02);
     position: relative;
     transition: 0.3s;
 }
@@ -903,52 +946,43 @@ justify-content: center;
 .timeline-container::before {
     content: '';
     position: absolute;
-    left: 0;
+    left: -20px;
+    /* Positionne la ligne à gauche du contenu */
     top: 30px;
     bottom: 0;
-    width: 2px;
+    width: 3px;
     background-color: #065cc2;
 }
 
-.timeline-card {
-    margin-left: 20px;
-}
-
-/* Le point sur la timeline */
 .timeline-dot {
     position: absolute;
-    
+
     /* 1. TAILLE DU COEUR BLEU */
     width: 15px;
     height: 15px;
-    background-color: #065cc2; /* Le bleu plein du centre */
+    background-color: #065cc2;
+    /* Le bleu plein du centre */
     border-radius: 50%;
 
     /* 2. LE CERCLE BLANC (Le liseré net) */
     /* On utilise une bordure blanche très fine */
-    border: 3px solid #fff; 
+    border: 3px solid #fff;
 
     /* 3. LE HALO BLEU CLAIR (L'effet d'auréole) */
     /* On utilise box-shadow sans flou pour créer un disque parfait */
     /* Syntaxe : x y flou étalement couleur */
-    box-shadow: 0 0 0 6px #e1eeff; 
+    box-shadow: 0 0 0 6px #e1eeff;
 
     /* 4. ALIGNEMENT SUR LA LIGNE */
     /* Tu devras ajuster le "left" selon ton padding, 
        mais voici le calcul pour le centrage : */
-    left: -49px; 
-    top: 25px; 
-    
-    z-index: 10; /* Pour passer par-dessus la ligne bleue */
+    left: -49px;
+    top: 25px;
+
+    z-index: 10;
+    /* Pour passer par-dessus la ligne bleue */
 }
 
-/* RESPONSIVE */
-@media (max-width: 992px) {
-    .resume-grid {
-        grid-template-columns: 1fr;
-    }
-}
-/* SECTION SERVICES */
 .services-section {
     padding: 80px 8%;
     background-color: #ffffff;
@@ -958,12 +992,15 @@ justify-content: center;
 .services-section .section-header {
     margin-bottom: 60px;
     width: 100%;
-    margin-left: 4%;
+    margin-left: 1%;
 }
+
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colonnes de taille égale */
-    gap: 30px; /* Espace entre les cartes */
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 colonnes de taille égale */
+    gap: 30px;
+    /* Espace entre les cartes */
     margin-top: 40px;
 }
 
@@ -973,8 +1010,10 @@ justify-content: center;
     padding: 40px;
     border-radius: 15px;
     border: 1px solid #f1f5f9;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03); /* Ombre très légère */
-    transition: all 0.3s ease; /* Animation fluide au survol */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    /* Ombre très légère */
+    transition: all 0.3s ease;
+    /* Animation fluide au survol */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -982,8 +1021,10 @@ justify-content: center;
 
 /* Effet au survol (Hover) */
 .service-card:hover {
-    transform: translateY(-10px); /* La carte monte un peu */
-    box-shadow: 0 15px 40px rgba(6, 92, 194, 0.1); /* L'ombre devient bleue */
+    transform: translateY(-10px);
+    /* La carte monte un peu */
+    box-shadow: 0 15px 40px rgba(6, 92, 194, 0.1);
+    /* L'ombre devient bleue */
     border-color: #065cc2;
 }
 
@@ -1033,31 +1074,18 @@ justify-content: center;
 }
 
 .learn-more:hover i {
-    transform: translateX(5px); /* La flèche bouge à droite au survol */
+    transform: translateX(5px);
+    /* La flèche bouge à droite au survol */
 }
 
-/* RESPONSIVE : 2 colonnes sur tablette, 1 seule sur mobile */
-@media (max-width: 992px) {
-    .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
-    .service-card {
-        padding: 30px;
-    }
-}
 .portfolio-section {
     width: 100vw;
     padding: 80px 1px;
     background-color: #ffffff;
     /* margin: 0 2% 0 2%; */
 }
-.contenues-images{
+
+.contenues-images {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -1065,18 +1093,22 @@ justify-content: center;
     grid-gap: 20px;
     /* margin: 40px 2% 0 2%; */
     font-family: 'Roboto', sans-serif;
-    padding: 30px;
+    padding-left: 25px;
+    padding-right: 25px;
 
 }
+
 .contenues-images div img {
     width: 100%;
     height: auto;
     border-radius: 12px;
     transition: 0.3s;
 }
+
 .contenues-images div img:hover {
     transform: scale(1.1);
 }
+
 .entete-section {
     display: flex;
     flex-direction: column;
@@ -1084,82 +1116,95 @@ justify-content: center;
     margin-bottom: 60px;
     margin-left: 8%;
 }
+
 .title-wrapper2 {
     display: flex;
     gap: 15px;
     align-items: center;
     margin-bottom: 10px;
     font-family: 'Quicksand', sans-serif;
-    /* margin-left: 8%; */
-
-    /* margin-bottom: 10px;
-    font-family: 'Quicksand', sans-serif;
-    margin-left: -5px; /* Légère compensation pour aligner le titre avec la ligne */
-    /* padding-left: 5px; Légère compensation pour aligner le titre avec la ligne */ */
 }
+
 .title-wrapper2 h2 {
-    font-size: 2rem;
-    color: #13447f; /* Bleu foncé */
+    font-size: 32px;
+    color: #13447f;
+    /* Bleu foncé */
     text-transform: none;
     font-weight: 700;
-     font-family: 'Quicksand', sans-serif;
-     
+    font-family: 'Quicksand', sans-serif;
+
 }
+
 .title-wrapper2 .line {
     width: 120px;
     height: 2px;
-    background-color: #065cc2; /* Bleu vif */
-    
+    background-color: #065cc2;
+    /* Bleu vif */
+
 
 }
-.entete-div{
+
+.entete-div {
     display: flex;
     gap: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 60px;
     align-items: center;
     justify-content: center;
     font-family: 'Quicksand', sans-serif;
-    margin-left: 8%;
+    /* margin-left: 8%; */
 }
-.entete-div div{
+
+.entete-div div {
     /* color: #99a9b5; Gris clair */
     font-size: 0.95rem;
-    max-width: 600px;
+    max-width: 620px;
     font-family: 'Quicksand', sans-serif;
     background: rgb(231, 202, 202);
-    padding: 8px 15px;
-    border-radius: 0.5em;
+    padding: 15px 25px;
+    border-radius: 20px;
     color: #314862;
-    display: inline-block; /*pour qu'ils soient cote  à cote*/
-    
+    display: inline-block;
+    /*pour qu'ils soient cote  à cote*/
+
 }
+
 .entete-div div:first-child {
     background: #065cc2;
     color: white;
 }
 
 
-.entete2:hover,.entete3:hover,.entete4:hover,.entete5:hover {  
-    color:#85b9ee;      
-    background: #f1f5f9; 
-     
+.entete2:hover,
+.entete3:hover,
+.entete4:hover,
+.entete5:hover {
+    color: #85b9ee;
+    background: #f1f5f9;
+
 }
+
 /* --- 3. LES AUTRES (2, 3, 4, 5) : Background clair par défaut --- */
 /* On cible toutes les div SAUF la première */
 .entete-div div:not(:first-child) {
-    background: transparent; /* Pas de fond bleu */
-    color: #7b91a5;         /* Un gris élégant pour le texte inactif */
+    background: transparent;
+    /* Pas de fond bleu */
+    color: #7b91a5;
+    /* Un gris élégant pour le texte inactif */
 }
 
 /* --- 4. EFFET AU SURVOL SUR LES AUTRES --- */
 .entete-div div:not(:first-child):hover {
-    background: #314862;    /* Ta couleur bleu foncé au survol */
-    color: white;           /* On met le texte en blanc pour que ce soit lisible */
+    background: #314862;
+    /* Ta couleur bleu foncé au survol */
+    color: white;
+    /* On met le texte en blanc pour que ce soit lisible */
 }
+
 /* --- SECTION GLOBALE --- */
 .Testimonials-section {
     padding: 80px 8%;
-    background-color:white; /* Fond très léger pour faire ressortir les cartes */
+    background-color: white;
+    /* Fond très léger pour faire ressortir les cartes */
     overflow: hidden;
 }
 
@@ -1187,20 +1232,22 @@ justify-content: center;
     background-color: #065cc2;
 }
 
-.section-subtitle {
+/* .section-subtitle {
     color: #99a9b5;
     font-family: 'Roboto', sans-serif;
     max-width: 600px;
-    margin-bottom: 30px;
+    margin-bottom: 30px; */
 
-}
+
 
 /* --- STYLE COMMUN DES CARTES --- */
-.card-test, .cardtest-item {
+.card-test,
+.cardtest-item {
     background-color: #ffffff;
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Ombre douce */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    /* Ombre douce */
     transition: transform 0.3s ease;
     border: 1px solid transparent;
 }
@@ -1222,7 +1269,8 @@ justify-content: center;
 }
 
 .groupe-etoiles {
-    color: #ffc107; /* Jaune or */
+    color: #ffc107;
+    /* Jaune or */
     margin-bottom: 15px;
     font-size: 0.9rem;
 }
@@ -1248,14 +1296,17 @@ justify-content: center;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     padding-bottom: 30px;
-    scrollbar-width: none; /* Cache la barre Firefox */
+    scrollbar-width: none;
+    /* Cache la barre Firefox */
 }
 
 /* Les cartes du bas */
-.testimonial-itemsbas > div {
-    flex: 0 0 calc(33.33% - 20px); /* 3 cartes visibles */
+.testimonial-itemsbas>div {
+    flex: 0 0 calc(33.33% - 20px);
+    /* 3 cartes visibles */
     scroll-snap-align: start;
-    border-top: 3px solid #065cc2; /* Bordure bleue en haut style capture */
+    border-top: 3px solid #065cc2;
+    /* Bordure bleue en haut style capture */
 }
 
 /* --- PROFIL CLIENT --- */
@@ -1289,7 +1340,7 @@ justify-content: center;
     padding: 40px;
     border-radius: 15px;
     text-align: center;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
     width: calc(33.33% - 20px);
     margin: 50px auto;
     border: 1px solid #f1f5f9;
@@ -1316,37 +1367,55 @@ justify-content: center;
     font-size: 0.8rem;
     color: #065cc2;
 }
+
 .testimonial-pagination {
-    display: flex;            /* Aligne les points sur une ligne horizontale */
-    justify-content: center;   /* Centre les points au milieu de la section */
-    gap: 10px;                /* Espace de 10px entre chaque point */
-    margin-top: 20px;         /* Espace avec le slider au-dessus */
-    margin-bottom: 40px;      /* Espace avec la dernière carte en-dessous */
+    display: flex;
+    /* Aligne les points sur une ligne horizontale */
+    justify-content: center;
+    /* Centre les points au milieu de la section */
+    gap: 10px;
+    /* Espace de 10px entre chaque point */
+    margin-top: 20px;
+    /* Espace avec le slider au-dessus */
+    margin-bottom: 40px;
+    /* Espace avec la dernière carte en-dessous */
 }
 
 .dot {
-    width: 10px;              /* Largeur du point */
-    height: 10px;             /* Hauteur du point (égal à la largeur = carré) */
-    background-color: #bcd1ee; /* Couleur bleu clair (inactif) */
-    border-radius: 50%;       /* LE SECRET : transforme le carré en cercle parfait */
-    display: inline-block;    /* Permet de donner une taille au span */
-    cursor: pointer;          /* Change le curseur en main au survol */
-    transition: all 0.3s ease; /* Animation douce si on change de couleur */
+    width: 10px;
+    /* Largeur du point */
+    height: 10px;
+    /* Hauteur du point (égal à la largeur = carré) */
+    background-color: #bcd1ee;
+    /* Couleur bleu clair (inactif) */
+    border-radius: 50%;
+    /* LE SECRET : transforme le carré en cercle parfait */
+    display: inline-block;
+    /* Permet de donner une taille au span */
+    cursor: pointer;
+    /* Change le curseur en main au survol */
+    transition: all 0.3s ease;
+    /* Animation douce si on change de couleur */
 }
 
 /* LE POINT ACTIF (Celui qui est sélectionné) */
 .dot.active {
-    background-color: #065cc2; /* Le bleu vif de ton site */
-    width: 12px;               /* On le fait un tout petit peu plus grand */
+    background-color: #065cc2;
+    /* Le bleu vif de ton site */
+    width: 12px;
+    /* On le fait un tout petit peu plus grand */
     height: 12px;
 }
 
 /* EFFET AU SURVOL */
 .dot:hover {
-    background-color: #065cc2; /* Devient bleu foncé quand on passe la souris */
+    background-color: #065cc2;
+    /* Devient bleu foncé quand on passe la souris */
 }
+
 .faq-section {
-    padding: 80px 8%; /* Même largeur que les autres sections */
+    padding: 80px 8%;
+    /* Même largeur que les autres sections */
     background-color: #ffffff;
 }
 
@@ -1355,7 +1424,8 @@ justify-content: center;
     font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Espace entre chaque boîte de question */
+    gap: 15px;
+    /* Espace entre chaque boîte de question */
     margin-top: 40px;
 }
 
@@ -1366,9 +1436,12 @@ justify-content: center;
     border-radius: 8px;
     padding: 20px 30px;
     margin-bottom: 15px;
-    transition: all 0.4s ease; /* Transition fluide pour la bordure et l'ombre */
-    overflow: hidden; /* Important pour cacher le texte qui dépasse */
+    transition: all 0.4s ease;
+    /* Transition fluide pour la bordure et l'ombre */
+    overflow: hidden;
+    /* Important pour cacher le texte qui dépasse */
 }
+
 /* STYLE DE LA QUESTION */
 .faq-question {
     display: flex;
@@ -1381,59 +1454,74 @@ justify-content: center;
     font-family: 'Quicksand', sans-serif;
     font-size: 1.05rem;
     font-weight: 600;
-    color: #314862; /* Gris-bleu foncé */
-    
+    color: #314862;
+    /* Gris-bleu foncé */
+
 }
 
 .faq-question i {
     font-size: 0.9rem;
     color: #99a9b5;
-    transition: transform 0.4s ease; /* LE SECRET DE LA ROTATION */
+    transition: transform 0.4s ease;
+    /* LE SECRET DE LA ROTATION */
 }
 
 
 .faq-item:hover h3 {
-    color: #2a75cf; /* Texte devient bleu */
+    color: #2a75cf;
+    /* Texte devient bleu */
 }
 
 /* --- ÉTAT ACTIF (L'élément ouvert) --- */
 .faq-item.active {
     background-color: color-mix(in srgb, #065cc2, transparent 97%);
-    border-color: #e7ecf3; 
+    border-color: #e7ecf3;
     width: 100%;
-    height: 130px;
+    /* height: 130px; */
 }
 
 .faq-item.active h3 {
     color: #065cc2;
-    margin-bottom: 15px; /* Espace pour le texte en-dessous */
+    margin-bottom: 15px;
+    /* Espace pour le texte en-dessous */
 }
 
 .faq-item.active i {
     color: #065cc2;
-    transform: rotate(0deg); /* La flèche change de sens ou reste vers le bas */
+    transform: rotate(0deg);
+    /* La flèche change de sens ou reste vers le bas */
 }
+
 /* Si ton icône de base est vers la droite, on la tourne de 90 deg vers le bas */
 .faq-item.active .faq-question i {
-    transform: rotate(90deg); 
+    transform: rotate(90deg);
     color: #065cc2;
-}
-.faq-item.active .faq-content {
-    max-height: 500px;  /* On donne une hauteur assez grande pour laisser passer le texte */
-    opacity: 1;         /* Il devient visible */
-    margin-top: 15px;   /* Petit espace avec le titre */
-}
-/* LE CONTENU DE LA RÉPONSE */
-.faq-content {
-    /* Au lieu de display: none, on utilise ceci pour pouvoir animer plus tard */
-    max-height: 0;       /* Hauteur zéro au départ */
-    opacity: 0;          /* Invisible */
-    overflow: hidden;
-    transition: all 0.4s ease; /* Animation d'ouverture */
 }
 
 .faq-item.active .faq-content {
-    display: block; /* Visible seulement si la classe .active est présente */
+    max-height: 500px;
+    /* On donne une hauteur assez grande pour laisser passer le texte */
+    opacity: 1;
+    /* Il devient visible */
+    margin-top: 15px;
+    /* Petit espace avec le titre */
+}
+
+/* LE CONTENU DE LA RÉPONSE */
+.faq-content {
+    /* Au lieu de display: none, on utilise ceci pour pouvoir animer plus tard */
+    max-height: 0;
+    /* Hauteur zéro au départ */
+    opacity: 0;
+    /* Invisible */
+    overflow: hidden;
+    transition: all 0.4s ease;
+    /* Animation d'ouverture */
+}
+
+.faq-item.active .faq-content {
+    display: block;
+    /* Visible seulement si la classe .active est présente */
 }
 
 .faq-content p {
@@ -1442,15 +1530,18 @@ justify-content: center;
     color: #5f6f7d;
     line-height: 1.6;
 }
+
 .contact-section {
     padding: 80px 10%;
-    background-color: #f8fbfe; /* Fond très léger */
+    background-color: #f8fbfe;
+    /* Fond très léger */
     /* height: 150px; */
     /* margin-bottom: 60px; */
 }
 
 .contact-wrapper {
     display: flex;
+    align-items: stretch;
     gap: 30px;
     margin-top: 40px;
     margin-bottom: 40px;
@@ -1460,15 +1551,17 @@ justify-content: center;
 
 /* --- BLOC GAUCHE (BLEU) --- */
 .contact-info {
-    flex: 1; /* Occupe environ 40% */
-    background-color: #065cc2; /* Ton bleu "Accent" */
+    flex: 1;
+    /* Occupe environ 40% */
+    background-color: #065cc2;
+    /* Ton bleu "Accent" */
     color: #ffffff;
     padding: 50px 40px;
     border-radius: 15px;
-    height: 700px;
+    /* height: 700px; */
     box-shadow: 0 15px 35px rgba(6, 92, 194, 0.1);
-    
-    
+
+
 }
 
 .contact-info h3 {
@@ -1496,13 +1589,14 @@ justify-content: center;
 .info-icon {
     width: 60px;
     height: 60px;
-    background-color: rgba(255, 255, 255, 0.1); Cercle transparent blanc;
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.7rem;
 }
+
 .info-icon i {
     /* color: #ffffff; */
     background-color: transparent;
@@ -1521,7 +1615,8 @@ justify-content: center;
 
 /* --- BLOC DROIT (BLANC) --- */
 .contact-form-container {
-    flex: 1.5; /* Plus large que le bloc bleu */
+    flex: 1.5;
+    /* Plus large que le bloc bleu */
     background-color: #ffffff;
     padding: 50px 40px;
     border-radius: 15px;
@@ -1545,15 +1640,18 @@ justify-content: center;
 .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 25px;
+
 }
 
 .form-row {
     display: flex;
     gap: 15px;
+    height: 60px;
 }
 
-.contact-form input, .contact-form textarea {
+.contact-form input,
+.contact-form textarea {
     width: 100%;
     padding: 15px;
     border: 1px solid #e1e9f0;
@@ -1564,13 +1662,34 @@ justify-content: center;
     transition: 0.3s;
 }
 
-.contact-form input:focus, .contact-form textarea:focus {
-    border-color: #065cc2; /* S'illumine en bleu quand on clique dedans */
+.contact-form textarea {
+    /* 1. EMPECHE L'ÉLARGISSEMENT HORIZONTAL */
+    /* On dit au navigateur : "Uniquement verticalement" */
+    resize: vertical;
+
+    /* 2. SÉCURITÉ (CONSEIL SENIOR) */
+    /* On définit une hauteur minimum et maximum pour ne pas que 
+       l'utilisateur cache tout le reste du site en tirant trop vers le bas */
+    min-height: 150px;
+    max-height: 400px;
+
+    /* Le reste de ton style habituel */
+    /* width: 100%;
+    padding: 15px;
+    border: 1px solid #e1e9f0;
+    border-radius: 8px; */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #065cc2;
+    /* S'illumine en bleu quand on clique dedans */
 }
 
 .form-button-center {
     display: flex;
-    justify-content: center; /* Centre le bouton comme sur l'image */
+    justify-content: center;
+    /* Centre le bouton comme sur l'image */
     margin-top: 10px;
 }
 
@@ -1588,4 +1707,48 @@ justify-content: center;
 .btn-send:hover {
     background-color: #13447f;
     transform: translateY(-3px);
+}
+
+.footer-classe {
+    background-color: #065cc2;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    position: relative;
+    width: 100%;
+    height: 160px;
+}
+
+.footer-classe.containue {
+    gap: 25px;
+    margin-top: 15px;
+}
+
+.reseauxlien {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    /* Espace entre les cercles */
+    margin: 20px 0;
+}
+
+.reseauxlien a {
+    width: 40px;
+    height: 40px;
+    /* LA TRANSPARENCE : on utilise rgba (Rouge, Vert, Bleu, Alpha/Transparence) */
+    /* Ici : blanc (255,255,255) à 10% d'opacité (0.1) */
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: color-mix(in srgb, #ffffff, transparent 50%)
 }
