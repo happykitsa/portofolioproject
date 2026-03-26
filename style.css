@@ -921,7 +921,7 @@ justify-content: center;
     background-color: #fff;
     border: 3px solid #065cc2;
     border-radius: 50%;
-    /* z-index: 2; */
+    z-index: 2; 
 }
 
 /* RESPONSIVE */
@@ -930,3 +930,207 @@ justify-content: center;
         grid-template-columns: 1fr;
     }
 }
+/* SECTION SERVICES */
+.services-section {
+    padding: 80px 8%;
+    background-color: #ffffff;
+}
+
+/* La Grille : 3 colonnes égales */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes de taille égale */
+    gap: 30px; /* Espace entre les cartes */
+    margin-top: 40px;
+}
+
+/* LA CARTE DE SERVICE */
+.service-card {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03); /* Ombre très légère */
+    transition: all 0.3s ease; /* Animation fluide au survol */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Effet au survol (Hover) */
+.service-card:hover {
+    transform: translateY(-10px); /* La carte monte un peu */
+    box-shadow: 0 15px 40px rgba(6, 92, 194, 0.1); /* L'ombre devient bleue */
+    border-color: #065cc2;
+}
+
+/* L'ICÔNE */
+.service-icon {
+    font-size: 2.5rem;
+    color: #065cc2;
+    margin-bottom: 20px;
+}
+
+/* LE TITRE DE LA CARTE */
+.service-card h3 {
+    font-family: 'Quicksand', sans-serif;
+    color: #13447f;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+/* LE TEXTE */
+.service-card p {
+    color: #5f6f7d;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* LE LIEN "LEARN MORE" */
+.learn-more {
+    color: #065cc2;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.learn-more i {
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+.learn-more:hover {
+    color: #13447f;
+}
+
+.learn-more:hover i {
+    transform: translateX(5px); /* La flèche bouge à droite au survol */
+}
+
+/* RESPONSIVE : 2 colonnes sur tablette, 1 seule sur mobile */
+@media (max-width: 992px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    .service-card {
+        padding: 30px;
+    }
+}
+.portfolio-section {
+    width: 100vw;
+    padding: 80px 1px;
+    background-color: #ffffff;
+    /* margin: 0 2% 0 2%; */
+}
+.contenues-images{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 20px;
+    /* margin: 40px 2% 0 2%; */
+    font-family: 'Roboto', sans-serif;
+    padding: 30px;
+
+}
+.contenues-images div img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+.contenues-images div img:hover {
+    transform: scale(1.1);
+}
+.entete-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 60px;
+    margin-left: 8%;
+}
+.title-wrapper2 {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 10px;
+    font-family: 'Quicksand', sans-serif;
+    /* margin-left: 8%; */
+
+    /* margin-bottom: 10px;
+    font-family: 'Quicksand', sans-serif;
+    margin-left: -5px; /* Légère compensation pour aligner le titre avec la ligne */
+    /* padding-left: 5px; Légère compensation pour aligner le titre avec la ligne */ */
+}
+.title-wrapper2 h2 {
+    font-size: 2rem;
+    color: #13447f; /* Bleu foncé */
+    text-transform: none;
+    font-weight: 700;
+     font-family: 'Quicksand', sans-serif;
+     
+}
+.title-wrapper2 .line {
+    width: 120px;
+    height: 2px;
+    background-color: #065cc2; /* Bleu vif */
+    
+
+}
+.entete-div{
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Quicksand', sans-serif;
+    margin-left: 8%;
+}
+.entete-div div{
+    /* color: #99a9b5; Gris clair */
+    font-size: 0.95rem;
+    max-width: 600px;
+    font-family: 'Quicksand', sans-serif;
+    background: rgb(231, 202, 202);
+    padding: 8px 15px;
+    border-radius: 0.5em;
+    color: #314862;
+    display: inline-block; /*pour qu'ils soient cote  à cote*/
+    
+}
+.entete-div div:first-child {
+    background: #065cc2;
+    color: white;
+}
+
+
+.entete2:hover,.entete3:hover,.entete4:hover,.entete5:hover {  
+    color:#85b9ee;      
+    background: #f1f5f9; 
+     
+}
+/* --- 3. LES AUTRES (2, 3, 4, 5) : Background clair par défaut --- */
+/* On cible toutes les div SAUF la première */
+.entete-div div:not(:first-child) {
+    background: transparent; /* Pas de fond bleu */
+    color: #7b91a5;         /* Un gris élégant pour le texte inactif */
+}
+
+/* --- 4. EFFET AU SURVOL SUR LES AUTRES --- */
+.entete-div div:not(:first-child):hover {
+    background: #314862;    /* Ta couleur bleu foncé au survol */
+    color: white;           /* On met le texte en blanc pour que ce soit lisible */
+}
+
